@@ -1,4 +1,6 @@
 #include "CCore.h"
+#include "Scene/SceneManager.h"
+#include "Core/Timer.h"
 
 CCore* CCore::m_pInst = NULL;
 bool CCore::m_bLoop = true;
@@ -9,6 +11,8 @@ CCore::CCore()
 
 CCore::	~CCore()
 {
+    DESTROY_SINGLE(CSceneManager);
+    DESTROY_SINGLE(CTimer);
 }
 
 bool CCore::Init(HINSTANCE hInst)
@@ -22,6 +26,14 @@ bool CCore::Init(HINSTANCE hInst)
     m_tRS.iH = 720;
 
     Create();
+
+    //타이머 초기화
+    if (!GET_SINGLE(CTimer)->Init())
+        return false;
+
+    //장면관리자 초기화
+    if (!GET_SINGLE(CSceneManager)->Init())
+        return false;
 
 	return true;
 }
@@ -41,13 +53,22 @@ int CCore::Run()
             TranslateMessage(&msg);
             DispatchMessage(&msg);
         }
+        //윈도우 데드타임 일경우.
         else
         {
-
+            Logic();
         }
     }
 
     return (int)msg.wParam;
+}
+
+void CCore::Logic()
+{
+    //타이머 갱신
+    GET_SINGLE(CTimer)->Update();
+
+    float   fDeltaTime = GET_SINGLE(CTimer)->GetDeltaTime();
 }
 
 ATOM CCore::MyRegisterClass()

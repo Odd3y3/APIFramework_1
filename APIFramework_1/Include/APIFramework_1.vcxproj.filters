@@ -16,13 +16,31 @@
     <Filter Include="01.Core">
       <UniqueIdentifier>{f093ae5c-9e6d-4208-8cae-1539b032a66f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="02.Scene">
+      <UniqueIdentifier>{0af42678-e22c-4e5b-8a42-6a2097da8508}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Core\01.Timer">
+      <UniqueIdentifier>{f14a104c-3c73-4f57-8fb7-518f08bffff1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="CCore.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>01.Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene\InGameScene.cpp">
+      <Filter>02.Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene\Scene.cpp">
+      <Filter>02.Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene\SceneManager.cpp">
+      <Filter>02.Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Timer.cpp">
+      <Filter>01.Core\01.Timer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -32,14 +50,29 @@
     <ClInclude Include="Macro.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="CCore.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Types.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Flag.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CCore.h">
+      <Filter>01.Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene\InGameScene.h">
+      <Filter>02.Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene\Scene.h">
+      <Filter>02.Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene\SceneManager.h">
+      <Filter>02.Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Timer.h">
+      <Filter>01.Core\01.Timer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

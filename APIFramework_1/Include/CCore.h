@@ -4,6 +4,7 @@
 
 class CCore
 {
+	/*
 private:
 	static CCore*	m_pInst;
 
@@ -21,7 +22,8 @@ public:
 
 private:
 	CCore();
-	~CCore();
+	~CCore();*/
+	DECLARE_SINGLE(CCore);
 
 private:
 	static bool	m_bLoop;
@@ -34,6 +36,9 @@ private:
 public:
 	bool Init(HINSTANCE hInst);
 	int Run();
+
+private:
+	void Logic();
 
 private:
 	ATOM MyRegisterClass();
