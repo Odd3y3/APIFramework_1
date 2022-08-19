@@ -28,6 +28,15 @@
     <Filter Include="03.Object">
       <UniqueIdentifier>{e310e5c0-cdaa-4cf2-b0b0-b2579db502a0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="03.Object\01.MoveObj">
+      <UniqueIdentifier>{401888a9-9450-4d6a-8928-c4cb7f94c22e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Object\02.StaticObj">
+      <UniqueIdentifier>{4c517bc4-ac18-4d99-8dd0-b6e7ac7a0710}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Object\01.MoveObj\01.Player">
+      <UniqueIdentifier>{f7020266-6c6e-4f01-b555-a6d58bc7908c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -53,6 +62,18 @@
     </ClCompile>
     <ClCompile Include="Obj\Obj.cpp">
       <Filter>03.Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Ref.cpp">
+      <Filter>01.Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Obj\MoveObj.cpp">
+      <Filter>03.Object\01.MoveObj</Filter>
+    </ClCompile>
+    <ClCompile Include="Obj\StaticObj.cpp">
+      <Filter>03.Object\02.StaticObj</Filter>
+    </ClCompile>
+    <ClCompile Include="Obj\Player.cpp">
+      <Filter>03.Object\01.MoveObj\01.Player</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +112,18 @@
     </ClInclude>
     <ClInclude Include="Obj\Obj.h">
       <Filter>03.Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Ref.h">
+      <Filter>01.Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Obj\MoveObj.h">
+      <Filter>03.Object\01.MoveObj</Filter>
+    </ClInclude>
+    <ClInclude Include="Obj\StaticObj.h">
+      <Filter>03.Object\02.StaticObj</Filter>
+    </ClInclude>
+    <ClInclude Include="Obj\Player.h">
+      <Filter>03.Object\01.MoveObj\01.Player</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

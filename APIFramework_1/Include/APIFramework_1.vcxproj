@@ -149,7 +149,11 @@
     <ClCompile Include="CCore.cpp" />
     <ClCompile Include="Core\Timer.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Obj\Player.cpp" />
+    <ClCompile Include="Obj\MoveObj.cpp" />
     <ClCompile Include="Obj\Obj.cpp" />
+    <ClCompile Include="Obj\StaticObj.cpp" />
+    <ClCompile Include="Ref.cpp" />
     <ClCompile Include="Scene\InGameScene.cpp" />
     <ClCompile Include="Scene\Layer.cpp" />
     <ClCompile Include="Scene\Scene.cpp" />
@@ -161,7 +165,11 @@
     <ClInclude Include="Flag.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Macro.h" />
+    <ClInclude Include="Obj\Player.h" />
+    <ClInclude Include="Obj\MoveObj.h" />
     <ClInclude Include="Obj\Obj.h" />
+    <ClInclude Include="Obj\StaticObj.h" />
+    <ClInclude Include="Ref.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Scene\InGameScene.h" />
     <ClInclude Include="Scene\Layer.h" />

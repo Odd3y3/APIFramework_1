@@ -21,6 +21,7 @@ protected:
 
 public:
 	class CLayer* CreateLayer(const string& strTag, int iZOrder = 0);
+	class CLayer* FindLayer(const string& strTag);
 
 public:
 	virtual bool Init();
