@@ -51,58 +51,66 @@ typedef struct _tagPosition
 	}
 
 	// + 연산자 오버로딩
-	_tagPosition operator+ (const _tagPosition& pos)
+	_tagPosition operator+ (const _tagPosition& pos)	const
 	{
 		_tagPosition	tPos;
 		tPos.x = x + pos.x;
 		tPos.y = y + pos.y;
 		return tPos;
 	}
-	_tagPosition operator+ (const POINT& pt)
+	_tagPosition operator+ (const POINT& pt)	const
 	{
 		_tagPosition	tPos;
 		tPos.x = x + pt.x;
 		tPos.y = y + pt.y;
 		return tPos;
 	}
-	_tagPosition operator+ (float f[2])
+	_tagPosition operator+ (float f[2])	const
 	{
 		_tagPosition	tPos;
 		tPos.x = x + f[0];
 		tPos.y = y + f[1];
 		return tPos;
 	}
-	_tagPosition operator+ (float f)
+	_tagPosition operator+ (float f)	const
 	{
 		_tagPosition	tPos;
 		tPos.x = x + f;
 		tPos.y = y + f;
 		return tPos;
 	}
+	
+	// += 연산자 오버로딩
+
+	void operator += (const _tagPosition& pos)
+	{
+		x += pos.x;
+		y += pos.y;
+	}
 
 	// - 연산자 오버로딩
-	_tagPosition operator- (const _tagPosition& pos)
+	_tagPosition operator- (const _tagPosition& pos)	const
 	{
 		_tagPosition	tPos;
 		tPos.x = x - pos.x;
 		tPos.y = y - pos.y;
 		return tPos;
 	}
-	_tagPosition operator- (const POINT& pt)
+	_tagPosition operator- (const POINT& pt)	const
 	{
 		_tagPosition	tPos;
 		tPos.x = x - pt.x;
 		tPos.y = y - pt.y;
 		return tPos;
 	}
-	_tagPosition operator- (float f[2])
+	_tagPosition operator- (float f[2])	const
 	{
 		_tagPosition	tPos;
 		tPos.x = x - f[0];
 		tPos.y = y - f[1];
 		return tPos;
 	}
-	_tagPosition operator- (float f)
+	_tagPosition operator- (float f)	const
 	{
 		_tagPosition	tPos;
 		tPos.x = x - f;
@@ -111,28 +119,28 @@ typedef struct _tagPosition
 	}
 
 	// * 연산자 오버로딩
-	_tagPosition operator* (const _tagPosition& pos)
+	_tagPosition operator* (const _tagPosition& pos)	const
 	{
 		_tagPosition	tPos;
 		tPos.x = x * pos.x;
 		tPos.y = y * pos.y;
 		return tPos;
 	}
-	_tagPosition operator* (const POINT& pt)
+	_tagPosition operator* (const POINT& pt)	const
 	{
 		_tagPosition	tPos;
 		tPos.x = x * pt.x;
 		tPos.y = y * pt.y;
 		return tPos;
 	}
-	_tagPosition operator* (float f[2])
+	_tagPosition operator* (float f[2])	const
 	{
 		_tagPosition	tPos;
 		tPos.x = x * f[0];
 		tPos.y = y * f[1];
 		return tPos;
 	}
-	_tagPosition operator* (float f)
+	_tagPosition operator* (float f)	const
 	{
 		_tagPosition	tPos;
 		tPos.x = x * f;
@@ -141,28 +149,28 @@ typedef struct _tagPosition
 	}
 
 	// / 연산자 오버로딩
-	_tagPosition operator/ (const _tagPosition& pos)
+	_tagPosition operator/ (const _tagPosition& pos)	const
 	{
 		_tagPosition	tPos;
 		tPos.x = x / pos.x;
 		tPos.y = y / pos.y;
 		return tPos;
 	}
-	_tagPosition operator/ (const POINT& pt)
+	_tagPosition operator/ (const POINT& pt)	const
 	{
 		_tagPosition	tPos;
 		tPos.x = x / pt.x;
 		tPos.y = y / pt.y;
 		return tPos;
 	}
-	_tagPosition operator/ (float f[2])
+	_tagPosition operator/ (float f[2])	const
 	{
 		_tagPosition	tPos;
 		tPos.x = x / f[0];
 		tPos.y = y / f[1];
 		return tPos;
 	}
-	_tagPosition operator/ (float f)
+	_tagPosition operator/ (float f)	const
 	{
 		_tagPosition	tPos;
 		tPos.x = x / f;
