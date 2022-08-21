@@ -16,6 +16,7 @@ protected:
 	virtual void Collision(float fDeltaTime);
 	virtual void Render(HDC hDC, float fDeltaTime);
 
+
 protected:
 	list<class CLayer*> m_LayerList;
 
