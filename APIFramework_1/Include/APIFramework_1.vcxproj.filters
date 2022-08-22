@@ -40,6 +40,9 @@
     <Filter Include="03.Object\01.MoveObj\02.Monster">
       <UniqueIdentifier>{8caf0546-af4c-4adc-af4a-4443eec3aabf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="03.Object\01.MoveObj\03.Bullet">
+      <UniqueIdentifier>{30882e92-2133-4894-9667-20af9be128a3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -80,6 +83,9 @@
     </ClCompile>
     <ClCompile Include="Obj\Minion.cpp">
       <Filter>03.Object\01.MoveObj\02.Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="Obj\Bullet.cpp">
+      <Filter>03.Object\01.MoveObj\03.Bullet</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -133,6 +139,9 @@
     </ClInclude>
     <ClInclude Include="Obj\Minion.h">
       <Filter>03.Object\01.MoveObj\02.Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="Obj\Bullet.h">
+      <Filter>03.Object\01.MoveObj\03.Bullet</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

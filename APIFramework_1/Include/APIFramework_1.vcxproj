@@ -149,6 +149,7 @@
     <ClCompile Include="CCore.cpp" />
     <ClCompile Include="Core\Timer.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Obj\Bullet.cpp" />
     <ClCompile Include="Obj\Minion.cpp" />
     <ClCompile Include="Obj\Player.cpp" />
     <ClCompile Include="Obj\MoveObj.cpp" />
@@ -166,6 +167,7 @@
     <ClInclude Include="Flag.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Macro.h" />
+    <ClInclude Include="Obj\Bullet.h" />
     <ClInclude Include="Obj\Minion.h" />
     <ClInclude Include="Obj\Player.h" />
     <ClInclude Include="Obj\MoveObj.h" />
