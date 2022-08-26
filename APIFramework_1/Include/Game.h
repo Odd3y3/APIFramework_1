@@ -14,7 +14,13 @@ using namespace std;
 #include "Flag.h"
 #include "Types.h"
 
+#pragma comment(lib, "msimg32")
+
 #define	PI	3.141592f
+
+//PATH KEY
+#define ROOT_PATH	"RootPath"
+#define TEXTURE_PATH	"TexturePath"
 
 template <typename T>
 void Safe_Delete_VecList(T& p)

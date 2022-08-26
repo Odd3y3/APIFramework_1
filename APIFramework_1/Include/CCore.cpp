@@ -1,6 +1,8 @@
 #include "CCore.h"
 #include "Scene/SceneManager.h"
 #include "Core/Timer.h"
+#include "Core/PathManager.h"
+#include "Resource/ResourceManager.h"
 
 CCore* CCore::m_pInst = NULL;
 bool CCore::m_bLoop = true;
@@ -8,13 +10,17 @@ bool CCore::m_bLoop = true;
 CCore::CCore()
 {
     _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
-    //_CrtSetBreakAlloc();
+    //_CrtSetBreakAlloc(282);
 }
 
-CCore::	~CCore()
+CCore::~CCore()
 {
     DESTROY_SINGLE(CSceneManager);
+    DESTROY_SINGLE(CResourceManager);
+    DESTROY_SINGLE(CPathManager);
     DESTROY_SINGLE(CTimer);
+
+    ReleaseDC(m_hWnd, m_hDC);
 }
 
 bool CCore::Init(HINSTANCE hInst)
@@ -34,6 +40,14 @@ bool CCore::Init(HINSTANCE hInst)
 
     //타이머 초기화
     if (!GET_SINGLE(CTimer)->Init())
+        return false;
+
+    //경로관리자 초기화
+    if (!GET_SINGLE(CPathManager)->Init())
+        return false;
+
+    //리소스 관리자 초기화
+    if (!GET_SINGLE(CResourceManager)->Init(hInst, m_hDC))
         return false;
 
     //장면관리자 초기화

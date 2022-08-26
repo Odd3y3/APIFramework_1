@@ -10,6 +10,7 @@ CInGameScene::CInGameScene()
 
 CInGameScene::~CInGameScene()
 {
+	ErasePrototype();
 }
 
 bool CInGameScene::Init()
